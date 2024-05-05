@@ -66,7 +66,6 @@ defineProps({
 
 <script>
 import { defineComponent } from 'vue';
-import { Message} from '@arco-design/web-vue';
 import { IconCaretRight, IconCaretLeft } from '@arco-design/web-vue/es/icon';
 
 export default defineComponent({
