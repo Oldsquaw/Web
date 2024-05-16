@@ -1,7 +1,8 @@
 <script setup>
 defineProps({
   bc1: { type: String, required: false },
-  bc2: { type: String, required: false }
+  bc2: { type: String, required: false },
+  selectedMenuItem: { type: String, required: true },
 })
 </script>
 
@@ -10,18 +11,17 @@ defineProps({
     <a-layout-sider collapsible breakpoint="lg">
       <div class="logo" />
       <a-menu
-          :default-open-keys="['1']"
-          :default-selected-keys="['0_3']"
+          :default-selected-keys=selectedMenuItem
           :style="{ width: '100%' }"
       >
         <a-menu-item key="0_1">
-          主页
+          <router-link to="/">主页</router-link>
         </a-menu-item>
         <a-menu-item key="0_2">
           启动 Oldsquaw
         </a-menu-item>
         <a-menu-item key="0_3">
-          OExperience
+          <router-link to="/Lab/Experiences">OExperience</router-link>
         </a-menu-item>
         <a-menu-item key="0_4">
           OStudio
@@ -54,11 +54,11 @@ defineProps({
           </a-page-header>
         </div>
       </a-layout-header >
-      <a-layout style="padding: 0 24px;">
+      <a-layout style="padding: 0 24px;" class="content1">
         <a-layout-content>
-          <slot/>
+          <slot class="content-slot"/>
         </a-layout-content>
-        <a-layout-footer>©️Copyright 2023-2024 Oldsquaw, All right reserved.</a-layout-footer>
+        <a-layout-footer :style="{ color: '#FFFFFF' }">©️Copyright 2023-2024 Oldsquaw, All right reserved.</a-layout-footer>
       </a-layout>
     </a-layout>
   </a-layout>
@@ -116,7 +116,7 @@ export default defineComponent({
   background: var(--color-fill-2);
 }
 .main-layout :deep(.arco-layout-header)  {
-  height: 64px;
+  height: 112px;
   line-height: 64px;
   background: var(--color-bg-3);
 }
@@ -135,9 +135,14 @@ export default defineComponent({
 .main-layout :deep(.arco-layout-content)  {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   font-size: 16px;
   font-stretch: condensed;
   text-align: center;
+  padding: 20px;
+}
+@media(prefers-color-scheme: dark) {
+  .content1 {
+    background: #2a2a2b;
+  }
 }
 </style>
