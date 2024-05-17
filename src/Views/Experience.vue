@@ -11,7 +11,14 @@ import c3n97 from '@/Layouts/c3n97.vue'
             <a-card :style="{ width: '360px' }" :title=item.title>
               <template #extra>
                 <a-space>
-                  <a-button type="outline" size="small"><template #icon><iconMore /></template></a-button>
+                  <a-dropdown position="bl">
+                    <a-button type="outline" size="small"><template #icon><iconMore /></template></a-button>
+                    <template #content>
+                      <a-doption>在新窗口中打开</a-doption>
+                      <a-doption>举报</a-doption>
+                      <a-doption>复制此体验</a-doption>
+                    </template>
+                  </a-dropdown>
                   <a-button type="primary" size="small">启动</a-button>
                 </a-space>
               </template>
