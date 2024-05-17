@@ -20,7 +20,7 @@ defineProps({
         </a-menu-item>
         <a-menu-item key="0_2">
           <template #icon><icon-play-arrow /></template>
-          启动 Oldsquaw
+          <a href="//run.oldsquaw.cn">启动 Oldsquaw</a>
         </a-menu-item>
         <a-menu-item key="0_3">
           <template #icon><icon-attachment /></template>
