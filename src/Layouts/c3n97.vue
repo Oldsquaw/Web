@@ -24,7 +24,7 @@ defineProps({
           <router-link to="/Lab/Experiences">OExperience</router-link>
         </a-menu-item>
         <a-menu-item key="0_4">
-          OStudio
+          <router-link to="/Lab/Studio">OStudio</router-link>
         </a-menu-item>
         <a-menu-item key="0_5">
           OLabs

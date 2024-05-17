@@ -8,10 +8,12 @@ import * as VueRouter from 'vue-router';
 
 import Home from "@/Views/Home.vue";
 import Experience from "@/Views/Experience.vue";
+import Studio from "@/Views/Studio.vue";
 
 const routes = [
     { path: '/', component: Home },
     { path: '/Lab/Experiences', component: Experience },
+    { path: '/Lab/Studio', component: Studio}
 ]
 
 const router = VueRouter.createRouter({
