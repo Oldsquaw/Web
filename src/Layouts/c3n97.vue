@@ -58,7 +58,7 @@ defineProps({
         <a-layout-content>
           <slot class="content-slot"/>
         </a-layout-content>
-        <a-layout-footer>©️Copyright 2023-2024 Oldsquaw, All right reserved.</a-layout-footer>
+        <a-layout-footer class="content-copyright">©️Copyright 2023-2024 Oldsquaw, All right reserved.</a-layout-footer>
       </a-layout>
     </a-layout>
   </a-layout>
@@ -143,6 +143,8 @@ export default defineComponent({
 @media(prefers-color-scheme: dark) {
   .content1 {
     background: #2a2a2b;
+  }
+  .content-copyright {
     color: #ffffff;
   }
 }
