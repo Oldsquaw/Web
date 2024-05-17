@@ -15,18 +15,23 @@ defineProps({
           :style="{ width: '100%' }"
       >
         <a-menu-item key="0_1">
+          <template #icon><icon-home /></template>
           <router-link to="/">主页</router-link>
         </a-menu-item>
         <a-menu-item key="0_2">
+          <template #icon><icon-play-arrow /></template>
           启动 Oldsquaw
         </a-menu-item>
         <a-menu-item key="0_3">
+          <template #icon><icon-attachment /></template>
           <router-link to="/Lab/Experiences">OExperience</router-link>
         </a-menu-item>
         <a-menu-item key="0_4">
+          <template #icon><icon-code /></template>
           <router-link to="/Lab/Studio">OStudio</router-link>
         </a-menu-item>
         <a-menu-item key="0_5">
+          <template #icon><icon-apps /></template>
           OLabs
         </a-menu-item>
       </a-menu>
