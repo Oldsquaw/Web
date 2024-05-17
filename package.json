@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@arco-themes/vue-0000": "^0.0.7",
     "@auth0/auth0-spa-js": "^2.1.3",
     "vue": "^3.4.21",
     "vue-router": "^4.3.2"
@@ -16,6 +17,7 @@
   "devDependencies": {
     "@arco-design/web-vue": "^2.55.1",
     "@vitejs/plugin-vue": "^5.0.4",
+    "less": "^4.2.0",
     "vite": "^5.2.8"
   }
 }

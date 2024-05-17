@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import ArcoVue from '@arco-design/web-vue';
 import ArcoVueIcon from '@arco-design/web-vue/es/icon';
 import App from './App.vue';
-import '@arco-design/web-vue/dist/arco.css';
+import '@arco-themes/vue-0000/index.less';
 import * as VueRouter from 'vue-router';
 
 
