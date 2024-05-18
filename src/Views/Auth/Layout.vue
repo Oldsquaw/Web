@@ -55,7 +55,7 @@ body {
   box-sizing: border-box;
   width: 100%;
   padding: 40px;
-  padding-bottom: 0px;
+  padding-bottom: 0;
   background-color: var(--color-neutral-2);
 }
 </style>
