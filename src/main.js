@@ -12,9 +12,14 @@ import * as VueRouter from 'vue-router';
 import Home from "@/Views/Home.vue";
 import Experience from "@/Views/Experience.vue";
 import Studio from "@/Views/Studio.vue";
+import Login from "@/Views/Auth/Login.vue";
+import Register from "@/Views/Auth/Register.vue";
 
 const routes = [
     { path: '/', component: Home },
+    { path: '/Auth', redirect: '/Auth/LogIn' },
+    { path: '/Auth/LogIn', component: Login },
+    { path: '/Auth/Register', component: Register },
     { path: '/Lab/Experiences', component: Experience },
     { path: '/Lab/Studio', component: Studio}
 ]
