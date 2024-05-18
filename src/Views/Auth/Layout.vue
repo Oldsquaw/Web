@@ -45,6 +45,7 @@ body {
 }
 .content {
   padding-left: 40px;
+  padding-right: 40px;
 }
 .cover {
   height: 250px;
