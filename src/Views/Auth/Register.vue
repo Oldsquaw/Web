@@ -1,6 +1,17 @@
 <script setup>
 import Layout from "@/Views/Auth/Layout.vue";
+import { reactive } from 'vue';
+
+const form = reactive({
+  username: '',
+  passwd: '',
+});
+
+const handleSubmit = () => {
+  console.log(form);
+};
 </script>
+
 
 <template>
   <Layout selected-menu-item="3">
