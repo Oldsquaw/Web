@@ -1,4 +1,5 @@
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+import { useAccountStore } from 'store.js'
 
 const auth = getAuth();
 
@@ -8,6 +9,7 @@ export function newAccount(mail, passwd) {
         .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
+            useAccountStore().updateUserInfo(user)
             return {
                 success: true,
                 nowOn: user
@@ -27,6 +29,7 @@ export function logIn(mail, passwd) {
         .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
+            useAccountStore().updateUserInfo(user)
             return {
                 success: true,
                 nowOn: user
