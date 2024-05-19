@@ -33,7 +33,7 @@ function storageAvailable(type) {
 if (storageAvailable('localStorage')) {
   Notification.success('localStorage 可用。')
   if (!localStorage['initialized']) {
-    function onInitModalSuccess(type) {
+    function onInitModalSuccess() {
       localStorage['initialized'] = 'success';
       location.reload()
       return true
@@ -57,7 +57,7 @@ if (storageAvailable('localStorage')) {
 </script>
 
 <template>
-  <c3n97 selected-menu-item="0_4" bc1="实验室" bc2="OStudio">
+  <c3n97 selected-menu-item="0_4" bc1="实验室" bc2="OStudio" show-copyright=1 show-head=1>
     <a-spin loading dot tip="在处理时请等待。"></a-spin>
   </c3n97>
 </template>

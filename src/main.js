@@ -14,6 +14,7 @@ import Experience from "@/Views/Experience.vue";
 import Studio from "@/Views/Studio.vue";
 import Login from "@/Views/Auth/Login.vue";
 import Register from "@/Views/Auth/Register.vue";
+import Run from "@/Views/Run.vue";
 
 const routes = [
     { path: '/', component: Home },
@@ -21,6 +22,7 @@ const routes = [
     { path: '/Auth/LogIn', component: Login },
     { path: '/Auth/Register', component: Register },
     { path: '/Lab/Experiences', component: Experience },
+    { path: '/Lab/Experiences/Run', component: Run},
     { path: '/Lab/Studio', component: Studio}
 ]
 
