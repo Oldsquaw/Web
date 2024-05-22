@@ -2,8 +2,6 @@
 defineProps({
   bc1: { type: String, required: false },
   bc2: { type: String, required: false },
-  showCopyright: { type: Number, required: true },
-  showHead: { type: Number, required: true },
   selectedMenuItem: { type: String, required: true },
 })
 </script>
@@ -44,7 +42,7 @@ defineProps({
       </template>
     </a-layout-sider>
     <a-layout>
-      <a-layout-header style="padding-left: 20px;" v-if="showHead === 1">
+      <a-layout-header style="padding-left: 20px;">
         <div>
           <a-page-header
               title="Oldsquaw"
@@ -65,7 +63,7 @@ defineProps({
         <a-layout-content>
           <slot class="content-slot"/>
         </a-layout-content>
-        <a-layout-footer v-if="showCopyright === 1" class="content-copyright">©️Copyright 2023-2024 Oldsquaw, All right reserved.</a-layout-footer>
+        <a-layout-footer class="content-copyright">©️Copyright 2023-2024 Oldsquaw, All right reserved.</a-layout-footer>
       </a-layout>
     </a-layout>
   </a-layout>

@@ -57,7 +57,7 @@ if (storageAvailable('localStorage')) {
 </script>
 
 <template>
-  <c3n97 selected-menu-item="0_4" bc1="实验室" bc2="OStudio" show-copyright=1 show-head=1>
+  <c3n97 selected-menu-item="0_4" bc1="实验室" bc2="OStudio">
     <a-spin loading dot tip="在处理时请等待。"></a-spin>
   </c3n97>
 </template>

@@ -4,7 +4,7 @@ import c3n97 from '@/Layouts/c3n97.vue'
 </script>
 
 <template>
-  <c3n97 selectedMenuItem="0_3" bc1="实验室" bc2="OExperience" show-copyright=1 show-head=1>
+  <c3n97 selectedMenuItem="0_3" bc1="实验室" bc2="OExperience">
     <a-row justify="space-around">
         <a-col v-for="item in dataList" :key="item.id" :span="8">
           <div :style="{ display: 'flex', textAlign: 'left', paddingBottom: '20px' }">

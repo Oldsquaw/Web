@@ -35,7 +35,7 @@ if (!allowed) {
 </script>
 
 <template>
-  <c3n97 selectedMenuItem="0_3" bc1="..." bc2="运行体验" show-copyright=0 show-head=0>
+  <c3n97 selectedMenuItem="0_3" bc1="..." bc2="运行体验">
     <iframe :src=workLink width="100%" height="100%"/>
   </c3n97>
 </template>
