@@ -1,5 +1,6 @@
 <script setup>
 import Layout from "@/Views/Auth/Layout.vue";
+import { logIn } from '@/authZone.js'
 import { reactive } from 'vue';
 
 const form = reactive({
@@ -8,7 +9,7 @@ const form = reactive({
 });
 
 const handleSubmit = () => {
-  console.log(form);
+  let logInStatus = logIn(form.username, form.passwd);
 };
 </script>
 
