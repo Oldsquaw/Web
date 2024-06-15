@@ -40,3 +40,27 @@ app.use(ArcoVueIcon);
 app.use(router);
 app.use(pinia)
 app.mount('#app');
+
+console.log(`
+   ____  __    __                               
+  / __ \\/ /___/ /________ ___  ______ __      __
+ / / / / / __  / ___/ __ \`/ / / / __ \`/ | /| / /
+/ /_/ / / /_/ (__  ) /_/ / /_/ / /_/ /| |/ |/ / 
+\\____/_/\\__,_/____/\\__, /\\__,_/\\__,_/ |__/|__/  
+                     /_/                        
+    ___
+  / __ \\____  / (_)___  ___                     
+ / / / / __ \\/ / / __ \\/ _ \\                    
+/ /_/ / / / / / / / / /  __/                    
+\\____/_/ /_/_/_/_/ /_/\\___/                     
+                                      
+\\_________________________________________________/                                                           
+                     
+GitHub: https://github.com/Oldsquaw/Web
+Welcome to create PR&Issue!
+
+WARN:
+This console is ONLY FOR DEBUG!
+Please DO NOT type or paste anything here!
+If anyone say you need to do something at here, please report it to Oldsquaw Team!
+`)
