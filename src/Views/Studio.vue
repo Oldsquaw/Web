@@ -33,7 +33,7 @@ function storageAvailable(type) {
 if (storageAvailable('localStorage')) {
   Notification.success('localStorage 可用。')
   if (!localStorage['initialized']) {
-    function onInitModalSuccess(type) {
+    function onInitModalSuccess() {
       localStorage['initialized'] = 'success';
       location.reload()
       return true

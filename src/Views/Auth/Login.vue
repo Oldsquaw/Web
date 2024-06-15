@@ -1,5 +1,6 @@
 <script setup>
 import Layout from "@/Views/Auth/Layout.vue";
+import { checkFormData } from "./checkInfo.js";
 import { reactive } from 'vue';
 
 const form = reactive({
@@ -8,8 +9,11 @@ const form = reactive({
 });
 
 const handleSubmit = () => {
-  console.log(form);
+  if (checkFormData(form)) {
+
+  }
 };
+
 </script>
 
 <template>

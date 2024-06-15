@@ -1,4 +1,4 @@
-# Oldsquaw Web
+# 奥德思阔 / Oldsquaw Web
 
 奥德思阔 是 Oldsquaw 旗下产品开发中的官方网站。
 

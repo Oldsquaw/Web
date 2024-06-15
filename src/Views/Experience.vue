@@ -19,7 +19,9 @@ import c3n97 from '@/Layouts/c3n97.vue'
                       <a-doption>复制此体验</a-doption>
                     </template>
                   </a-dropdown>
-                  <a-button type="primary" size="small">启动</a-button>
+                  <router-link to="/Lab/Experiences/Run?id=114514">
+                    <a-button type="primary" size="small">启动</a-button>
+                  </router-link>
                 </a-space>
               </template>
               {{ item.content }}
@@ -46,15 +48,7 @@ export default {
   data() {
     return {
       dataList: [
-        { title: 'col - 1', avatarText:'O' ,author: 'Oldsquaw', content: 'aaaaaa' },
-        { title: 'col - 1', avatarText:'O' ,author: 'Oldsquaw', content: 'aaaaaa' },
-        { title: 'col - 1', avatarText:'O' ,author: 'Oldsquaw', content: 'aaaaaa' },
-        { title: 'col - 1', avatarText:'O' ,author: 'Oldsquaw', content: 'aaaaaa' },
-        { title: 'col - 1', avatarText:'O' ,author: 'Oldsquaw', content: 'aaaaaa' },
-        { title: 'col - 1', avatarText:'O' ,author: 'Oldsquaw', content: 'aaaaaa' },
-        { title: 'col - 1', avatarText:'O' ,author: 'Oldsquaw', content: 'aaaaaa' },
-        { title: 'col - 1', avatarText:'O' ,author: 'Oldsquaw', content: 'aaaaaa' },
-        { title: 'col - 1', avatarText:'O' ,author: 'Oldsquaw', content: 'aaaaaa' },
+        { title: 'EX Music', avatarText:'EY酶' ,author: 'Enzyme YouMing 酶游明', content: 'APP', workId: 412964 },
       ]
     }
   }
