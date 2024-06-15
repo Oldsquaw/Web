@@ -51,7 +51,7 @@ if (storageAvailable('localStorage')) {
 } else {
   Modal.error({
     title: 'localStorage 不可用',
-    content: 'OStudio 必须使用 localStorage 来执行某些操作。请检查您的 localStorage 设置，然后重试。错误代码：ERR_STORAGE_NOT_AVAILABLE'
+    content: 'OStudio 必须使用 localStorage 来执行某些操作。请检查您的 localStorage 设置，然后重试。错误代码：ERR_STORAGE_L_NOT_AVAILABLE'
   });
 }
 </script>
