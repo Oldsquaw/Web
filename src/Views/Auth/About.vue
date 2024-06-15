@@ -4,7 +4,7 @@ import Layout from "@/Views/Auth/Layout.vue";
 
 <template>
   <Layout selected-menu-item="4" show-image="f">
-    <iframe src="https://blog.oldsquaw.cn/?post=2" :style="{ width: '100%', height: '1500px', border: 'none'}" class="iframe"></iframe>
+    <iframe src="https://doc.oldsquaw.cn/src/aboutOConnect.html" :style="{ width: '100%', height: '1500px', border: 'none'}" class="iframe"></iframe>
   </Layout>
 </template>
 
