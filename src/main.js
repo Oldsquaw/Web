@@ -1,7 +1,5 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import { firebaseApp } from "@/firebase.js";
-import { VueFire, VueFireAuth } from "vuefire";
 import ArcoVue from '@arco-design/web-vue';
 import ArcoVueIcon from '@arco-design/web-vue/es/icon';
 import App from './App.vue';
@@ -13,6 +11,7 @@ import Home from "@/Views/Home.vue";
 import Experience from "@/Views/Experience.vue";
 import Studio from "@/Views/Studio.vue";
 import Login from "@/Views/Auth/Login.vue";
+import About from "@/Views/Auth/About.vue";
 import Register from "@/Views/Auth/Register.vue";
 import Run from "@/Views/Run.vue";
 import PlusServices from "@/Views/PlusServices.vue";
@@ -22,6 +21,7 @@ const routes = [
     { path: '/Auth', redirect: '/Auth/LogIn' },
     { path: '/Auth/LogIn', component: Login },
     { path: '/Auth/Register', component: Register },
+    { path: '/Auth/About', component: About },
     { path: '/Lab/Experiences', component: Experience },
     { path: '/Lab/Experiences/Run', component: Run},
     { path: '/Lab/Studio', component: Studio},
@@ -39,10 +39,4 @@ app.use(ArcoVue);
 app.use(ArcoVueIcon);
 app.use(router);
 app.use(pinia)
-app.use(VueFire, {
-    firebaseApp,
-    modules: [
-        VueFireAuth
-    ],
-});
 app.mount('#app');
