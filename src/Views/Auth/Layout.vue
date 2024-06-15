@@ -1,6 +1,7 @@
 <script setup>
 defineProps({
-  selectedMenuItem: { type: String, required: true }
+  selectedMenuItem: { type: String, required: true },
+  showImage: {required: false, default: 't'}
 })
 </script>
 <template>
@@ -9,7 +10,7 @@ defineProps({
       <a-menu-item key="0" :style="{ padding: 0, marginRight: '38px' }" disabled>
         <div
             :style="{
-          width: '60px',
+          width: '85px',
           height: '30px',
           borderRadius: '2px',
           background: 'var(--color-fill-3)',
@@ -19,16 +20,16 @@ defineProps({
           fontSize: '10',
         }"
         >
-          OAuth
+          OConnect
         </div>
       </a-menu-item>
-      <a-menu-item key="1">返回</a-menu-item>
+      <a-menu-item key="1" @onClick="this.$router.go(-1)">返回</a-menu-item>
       <a-menu-item key="2"><router-link to="/Auth/LogIn">登录</router-link></a-menu-item>
       <a-menu-item key="3"><router-link to="/Auth/Register">注册</router-link></a-menu-item>
-      <a-menu-item key="4">关于O互联</a-menu-item>
+      <a-menu-item key="4"><router-link to="/Auth/About">关于O互联</router-link></a-menu-item>
     </a-menu>
   </div>
-  <div class="cover">
+  <div v-if="showImage === 't'" class="cover">
     <img src="https://i.pinimg.com/originals/f6/b9/f7/f6b9f7e5f67692524663a0b90956e0ab.jpg" alt="" style="width: 100%; height:100%; object-fit: cover;">
   </div>
   <div class="content">
@@ -55,8 +56,7 @@ body {
 .mainMenu {
   box-sizing: border-box;
   width: 100%;
-  padding: 40px;
-  padding-bottom: 0;
+  padding: 40px 40px 0;
   background-color: var(--color-neutral-2);
 }
 </style>

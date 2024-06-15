@@ -1,6 +1,6 @@
 <script setup>
 import Layout from "@/Views/Auth/Layout.vue";
-import { logIn } from '@/authZone.js'
+import { checkFormData } from "./checkInfo.js";
 import { reactive } from 'vue';
 
 const form = reactive({
@@ -9,8 +9,11 @@ const form = reactive({
 });
 
 const handleSubmit = () => {
-  let logInStatus = logIn(form.username, form.passwd);
+  if (checkFormData(form)) {
+
+  }
 };
+
 </script>
 
 <template>

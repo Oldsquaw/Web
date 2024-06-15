@@ -1,6 +1,9 @@
 <script setup>
 import Layout from "@/Views/Auth/Layout.vue";
-import { reactive } from 'vue';
+import { checkFormData } from "./checkInfo.js";
+import { reactive, ref } from 'vue';
+
+let visible = ref(true);
 
 const form = reactive({
   username: '',
@@ -9,8 +12,20 @@ const form = reactive({
 });
 
 const handleSubmit = () => {
-  console.log(form);
+  if (checkFormData(form)) {
+    model('open')
+  }
 };
+
+function model(action) {
+  if (action === 'open') {
+    visible.value = true;
+  } else if (action === 'close') {
+    visible.value = false;
+  }
+}
+
+
 </script>
 
 
@@ -31,6 +46,12 @@ const handleSubmit = () => {
       </a-form-item>
     </a-form>
   </Layout>
+  <a-modal v-model:visible="visible" @ok="model('close')" @cancel="model('close')">
+    <template #title>
+      警告
+    </template>
+    <div>注册暂不可用！</div>
+  </a-modal>
 </template>
 
 <style scoped>
